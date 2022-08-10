@@ -1,0 +1,23 @@
+body
+{
+
+    background-color: #C8C8C8;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+div.conainer
+{
+    left: 50%;
+    top: 50%;
+    margin-left: -35%;    
+    position: absolute;
+    margin-top: 15%;
+}
+
+p.content
+{
+
+    font-size: 30px;
+    color: brown;
+    font-family: Arial, Helvetica, sans-serif;
+}

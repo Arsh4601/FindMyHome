@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Result</title>
+
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="{% url 'about' %}"><img src="{% static 'image/logo.jpg' %}" alt="logo" style="width:40px;"></a>
+        
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'feed' %}">Feedback</a>
+          </li>
+        </ul>
+      </nav><br><br><br><br>
+
+      <div class="container">
+
+     <div class="row">
+     
+      <div class="col-sm-8">
+     
+      <form action="#">
+
+        {% csrf_token %}
+
+        <div class="form-group">
+
+            <label for="#">Overall Quality:</label>
+
+            <input type="text" class="form-control" placeholder="{{x.0}}" id="pwd">
+        </div>
+
+        <div class="form-group">
+
+            <label for="#">Car capacity of Garage:</label>
+            <input type="text" class="form-control" placeholder="{{x.1}}" id="pwd">
+        </div>
+
+        <div class="form-group">
+
+            <label for="#">Garage Area:</label>
+            <input type="text" class="form-control" placeholder="{{x.2}}" id="email">
+          </div>
+        
+          <div class="form-group">
+
+            <label for="#">Year Built:</label>
+            <input type="text" class="form-control" placeholder="{{x.3}}" id="email">
+          </div>
+          
+          <div class="form-group">
+
+            <label for="#">Living Area:</label>
+            <input type="text" class="form-control" placeholder="{{x.4}}" id="email">
+          </div>
+
+          <div class="form-group">
+
+            <label for="#">Total Basement Area:</label>
+            <input type="text" class="form-control" placeholder="{{x.5}}" id="email">
+          </div>
+
+          <div class="form-group">
+
+            <label for="#">Remodification Date:</label>
+            <input type="text" class="form-control" placeholder="{{x.6}}" id="email">
+          </div>
+
+          <div class="form-group">
+
+            <label for="#">Masonary type:</label><br>
+            
+            <input type="text" class="form-control" placeholder="{{x.7}}" id="pwd">
+          </div>
+
+          <br> 
+
+        
+      </form>
+    </div>
+
+     <div class="col-sm-4">
+
+       <b><p class="description">Result</p></b>  <br>
+
+      <p class="content">
+
+
+        The house-price is: $ {{price}}
+
+       
+       </p>
+
+
+     </div>
+
+  </div>
+
+</div>
+</body>
+</html>
