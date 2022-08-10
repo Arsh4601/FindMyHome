@@ -1,2 +1,2 @@
 # FindMyHome
-This is a Django app with ML model running at backend, help to predict house price based on various parameters 
+This is a ML based django app predicting house-price based on certain characteristics of house architecture . It would help the users to know their most probable price of the houses helping them to be ready to make it their homes. 
